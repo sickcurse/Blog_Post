@@ -1,3 +1,6 @@
-const formEl = document.querySelector('form');
+const formEl = ddocument.getElementById('form');
 
-const handleFormSubmit = function (event)
+const handleFormSubmit = function (event) {
+    event.preventDefault();
+
+}
