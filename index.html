@@ -18,10 +18,32 @@
  <header>
     <h1></h1>
 </header>
+
 <main>
     <aside>
         <h2>Your Personal Blog</h2>
     </aside>
+
+    <section class = "blog_data">
+
+        <h2>What are you thinking?</h1>
+            <form id='form'>
+              <label for = "username"> Username </label>
+              <input id = "username" type="text"/>
+      
+              <label for = "title"> Title </label>
+              <input id = "title" type="text"/>
+      
+              <label for = "content"> Content </label>
+              <textarea id = "content" type="text" rows="4"></textarea>
+              
+              <span id="error"></span>
+            
+              <input type="submit" value="Submit"/>
+            </form>
+
+    </section>
+
 </main>
 
 </body>
