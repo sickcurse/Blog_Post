@@ -1,0 +1,141 @@
+aside {
+    background: linear-gradient(
+      135deg, 
+      var(--light-accent), 
+      var(--circle-color), 
+      var(--dark-accent)
+    );
+    clip-path: circle(18rem at center);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  aside:hover {
+    transform: scale(1.05);
+  }
+  
+  aside, 
+  section {
+    flex: 1 1 45%;
+  }
+  
+  aside > h2 {
+    font-size: 3.5rem;
+    color: var(--accent-color);
+    text-shadow: 2px 2px 5px var(--dark-accent);
+    text-align: center;
+    transition: color 0.3s ease;
+  }
+  
+  aside > h2:hover {
+    color: var(--primary-color);
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    gap: 1.5rem;
+    padding: 1.5rem;
+    background-color: var(--form-background);
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+  }
+  
+  form:hover {
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  form > *:not(label) {
+    margin: 1rem 0;
+    padding: 0.75rem;
+  }
+  
+  h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 2.5rem;
+    color: var(--heading-color);
+    transition: color 0.3s ease;
+  }
+  
+  h2:hover {
+    color: var(--accent-color);
+  }
+  
+  input[type=submit] {
+    padding: 1rem;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1.1rem;
+    background-color: var(--primary-color);
+    color: var(--light);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  input[type=submit]:active {
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    background-color: var(--primary-color-dark);
+  }
+  
+  input[type=submit]:hover {
+    background-color: var(--primary-color-light);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  input,
+  textarea {
+    border-radius: 8px;
+    border-width: 2px;
+    border-color: var(--input-border);
+    font-size: 1.1rem;
+    background-color: var(--input-background);
+    padding: 0.75rem;
+    transition: border-color 0.3s ease;
+  }
+  
+  input:focus,
+  textarea:focus {
+    border-color: var(--accent-color);
+  }
+  
+  section {
+    padding: 2.5rem;
+    display: flex;
+    align-items: stretch;
+    flex-direction: column;
+    justify-content: center;
+    border-left: 4px solid var(--section-border);
+    background-color: var(--section-background);
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  section:hover {
+    border-color: var(--primary-color);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  
+  .dark section {
+    border-left: solid 0.5rem var(--disabled);
+    background-color: var(--dark-section-background);
+  }
+  
+ 
+  #error {
+    color: var(--error);
+    opacity: 0.85;
+    position: absolute;
+    bottom: -2rem;
+    font-size: 0.9rem;
+  }
+  

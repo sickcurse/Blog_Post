@@ -24,7 +24,7 @@ form.addEventListener('submit', function(event) {
       };
 
       storeLocalStorage(formData);
-    //   redirectPage();
+    
 
 window.location.href = "./blog.html"
 
