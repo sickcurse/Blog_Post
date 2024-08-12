@@ -1,4 +1,4 @@
-const formEl = ddocument.getElementById('form');
+const formEl = document.getElementById('form');
 
 const form = document.getElementById('form');
 const errorSpan = document.getElementById('error');
@@ -10,9 +10,9 @@ form.addEventListener('submit', function(event) {
     const titleEl = document.getElementById('title').value.trim();
     const contentEl = document.getElementById('content').value.trim();
 
-    if (!username || !title || !content) {
+    if (!usernameEl || !titleEl || !contentEl) {
         errorSpan.textContent = 'Please fill out all fields.';
-        setTimeout(() => errorSpan.textContent = '', 3000);
+        setTimeout(() => errorSpan.textContent = '', 5000);
     } else {
         errorSpan.textContent = ''; 
     }
@@ -24,5 +24,19 @@ form.addEventListener('submit', function(event) {
       };
 
       storeLocalStorage(formData);
-      redirectPage();
-});
+    //   redirectPage();
+
+window.location.href = "./blog.html"
+
+}); 
+function storeLocalStorage(formData) {
+let blogData = JSON.parse(localStorage.getItem("blog"))
+if (blogData){
+    blogData.push(formData)
+
+}else {
+blogData = []
+blogData.push(formData)
+}
+localStorage.setItem("blog",JSON.stringify(blogData))
+}
